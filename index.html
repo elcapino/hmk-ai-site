@@ -1,54 +1,119 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>HMK AI CONSULTANCIES — اتش ام كي للاستشارات الذكاء الاصطناعي</title>
+<meta name="description" content="شركة إماراتية من أبوظبي تبني وكلاء ذكاء اصطناعي باللهجة الخليجية وأتمتة للشركات الصغيرة والمتوسطة.">
+<meta name="theme-color" content="#0b6e4f">
+<link rel="preload" href="fonts/plex-ar-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b6e4f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='24' fill='%23fff' text-anchor='middle'%3EHMK%3C/text%3E%3C/svg%3E">
 <style>
-:root{--ink:#0f1b2d;--muted:#5b6575;--brand:#0b6e4f;--sand:#f6f1e7;--line:#e3dccd}
-*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif;color:var(--ink);line-height:1.7;background:#fff}
+/* HMK brand tokens v1 — shared by site, agent demo, صافي */
+@font-face{font-family:"Plex Ar";src:url(fonts/plex-ar-400.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2066-2069}
+@font-face{font-family:"Plex Ar";src:url(fonts/plex-ar-700.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2066-2069}
+@font-face{font-family:"Plex Ar";src:url(fonts/plex-la-400.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F,U+20AC}
+@font-face{font-family:"Plex Ar";src:url(fonts/plex-la-700.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F,U+20AC}
+:root{--brand:#0b6e4f;--brand-dk:#08573e;--brand-lt:#e3f1eb;--ink:#14202e;--muted:#4a5563;--sand:#f6f1e7;--line:#e2dacb;--gold:#b8892d;--err:#b42318;--r:16px;--tap:48px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Plex Ar","Segoe UI",Tahoma,sans-serif;color:var(--ink);font-size:17px;line-height:1.75;background:#fff}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--tap);padding:0 24px;border-radius:999px;border:0;background:var(--brand);color:#fff;font-weight:700;font-size:17px;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--brand-dk)}
+.btn.ghost{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+.btn.block{width:100%}
+.ltr{direction:ltr;unicode-bidi:isolate}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:8px}
-.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--brand)}
-.lang{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;cursor:pointer}
-.hero{background:var(--sand);padding:64px 0}
-h1{font-size:clamp(28px,4vw,44px);line-height:1.3;margin:0 0 12px}h2{font-size:26px;margin:0 0 18px}
-.lead{color:var(--muted);font-size:18px;max-width:640px}
-.cta{display:inline-block;margin-top:20px;background:var(--brand);color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none}
-section{padding:52px 0;border-bottom:1px solid var(--line)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.card{border:1px solid var(--line);border-radius:14px;padding:18px}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted)}
-.price{font-weight:700;color:var(--brand);margin-top:8px}
-ol.steps{display:flex;flex-wrap:wrap;gap:12px;padding:0;list-style:none;counter-reset:s}
-ol.steps li{flex:1 1 200px;border-inline-start:3px solid var(--brand);padding:6px 12px;counter-increment:s}
-ol.steps li::before{content:counter(s) ". ";font-weight:700}
-footer{padding:28px 0;color:var(--muted);font-size:14px}
-[data-en]{display:none}html[lang=en] [data-ar]{display:none}html[lang=en] [data-en]{display:block}
-html[lang=en] span[data-en],html[lang=en] a[data-en]{display:inline}html[lang=en] .cta[data-en]{display:inline-block}
-.small{font-size:13px;color:var(--muted)}
+.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2) blur(6px)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;min-height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;direction:ltr}
+.mark{width:36px;height:36px;border-radius:10px;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:12px;letter-spacing:.5px}
+.logo small{display:block;font-size:11px;color:var(--muted);font-weight:400;line-height:1.2}
+.lang{min-height:44px;min-width:64px;padding:0 16px;border:1px solid var(--line);background:#fff;border-radius:999px;cursor:pointer;font-weight:700;color:var(--brand)}
+.hero{background:var(--sand);padding:48px 0 56px}
+.badge{display:inline-block;background:var(--brand-lt);color:var(--brand-dk);font-size:14px;font-weight:700;padding:4px 14px;border-radius:999px;margin-bottom:14px}
+h1{font-size:clamp(30px,7vw,46px);line-height:1.35;margin:0 0 14px}
+h2{font-size:clamp(24px,5.5vw,30px);line-height:1.4;margin:0 0 18px}
+h3{font-size:19px;line-height:1.5;margin:0 0 6px}
+.lead{color:var(--muted);font-size:18px;max-width:640px;margin:0}
+.hero .btn{margin-top:24px}
+.hero .sub{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+section{padding:48px 0}
+section+section{border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:#fff}
+.card .ic{font-size:26px;line-height:1;margin-bottom:10px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.price{display:inline-block;margin-top:12px;font-weight:700;color:var(--brand);background:var(--brand-lt);padding:2px 12px;border-radius:8px;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:0;margin:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--sand);border-radius:var(--r);padding:16px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;margin-bottom:8px}
+.steps b{display:block}.steps span{color:var(--muted);font-size:15px}
+.note{font-size:14px;color:var(--muted);margin-top:16px}
+.contact{background:var(--brand);color:#fff;border-radius:20px;padding:28px 22px;text-align:center}
+.contact h2{color:#fff}.contact p{margin:0 0 18px;opacity:.95}
+.contact .btn{background:#fff;color:var(--brand)}
+.empty{display:inline-block;background:rgba(255,255,255,.14);border:1px dashed rgba(255,255,255,.6);border-radius:12px;padding:12px 18px;font-size:16px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;line-height:1.8}
+[data-en]{display:none}html[lang=en] [data-ar]{display:none}html[lang=en] [data-en]{display:revert}
 </style></head><body>
-<div class="wrap"><nav><div class="logo">HMK <span>AI</span> CONSULTANCIES</div>
-<button class="lang" onclick="toggle()"><span data-ar>English</span><span data-en>العربية</span></button></nav></div>
+<header class="top"><div class="wrap">
+<div class="logo"><span class="mark">HMK</span><span>HMK AI<small>CONSULTANCIES</small></span></div>
+<button class="lang" id="lang" aria-label="Switch language / تغيير اللغة"><span data-ar>EN</span><span data-en>عربي</span></button>
+</div></header>
+<main id="main">
 <div class="hero"><div class="wrap">
-<div data-ar><h1>ذكاء اصطناعي يتكلم لهجتك ويشتغل عنك</h1><p class="lead">شركة إماراتية من أبوظبي تبني وكلاء ذكاء اصطناعي باللهجة الخليجية، وأتمتة للشركات الصغيرة والمتوسطة، وأدوات تختصر أيام الشغل إلى ساعات. نماذج مفتوحة ومحلية أولاً، وبياناتك تبقى عندك.</p><a class="cta" href="#contact">احجز جلسة تعريفية مجانية (20 دقيقة)</a></div>
-<div data-en><h1>AI that speaks your dialect and does the work</h1><p class="lead">An Emirati company from Abu Dhabi building Gulf-Arabic AI agents, automation for SMEs, and tools that turn days of work into hours. Open and local models first; your data stays yours.</p><a class="cta" data-en href="#contact">Book a free 20-minute intro</a></div>
+<div data-ar><span class="badge">🇦🇪 من أبوظبي</span><h1>ذكاء اصطناعي يتكلّم لهجتك ويشتغل عنك</h1>
+<p class="lead">نبني لك وكلاء يردّون على عملائك بالخليجي، ونأتمت شغلك اليومي، ونختصر أيام الشغل في ساعات. وبياناتك تبقى عندك.</p>
+<a class="btn js-cta" href="#services">شوف خدماتنا</a><span class="sub js-sub">جلسة تعريفية مجانية 20 دقيقة</span></div>
+<div data-en><span class="badge">🇦🇪 From Abu Dhabi</span><h1>AI that speaks your dialect and does the work</h1>
+<p class="lead">We build agents that answer your customers in Gulf Arabic, automate your daily work, and turn days into hours. Your data stays yours.</p>
+<a class="btn js-cta" href="#services">See our services</a><span class="sub js-sub">Free 20-minute intro call</span></div>
 </div></div>
-<section><div class="wrap"><h2><span data-ar>المشكلة</span><span data-en>The problem</span></h2>
-<div data-ar><p class="lead">ردود واتساب تتأخر بعد الدوام، العروض تاخذ أسبوع، والفرق ما تعرف تستخدم أدوات الذكاء الاصطناعي بأمان.</p></div>
-<div data-en><p class="lead">WhatsApp replies stall after hours, bids take a week, and teams don't know how to use AI tools safely.</p></div></div></section>
-<section><div class="wrap"><h2><span data-ar>خدماتنا</span><span data-en>Services</span></h2><div class="grid">
-<div class="card"><div data-ar><h3>تقييم جاهزية الذكاء الاصطناعي</h3><p>خارطة طريق مكتوبة خلال 5–10 أيام عمل.</p><div class="price">يبدأ من 3,500 درهم</div></div><div data-en><h3>AI readiness audit</h3><p>A written roadmap in 5–10 working days.</p><div class="price">From AED 3,500</div></div></div>
-<div class="card"><div data-ar><h3>وكيل واتساب وموقع بالخليجي</h3><p>يرد، يحجز، ويحوّل للموظف.</p><div class="price">يبدأ من 3,000 درهم + اشتراك</div></div><div data-en><h3>Gulf-Arabic WhatsApp & web agent</h3><p>Answers, books and hands off to staff.</p><div class="price">From AED 3,000 + monthly</div></div></div>
-<div class="card"><div data-ar><h3>حزمة عروض المقاولين</h3><p>مسودة كميات وتقدير وجدول مراحل وكتيّب عرض خلال 1–2 يوم.</p></div><div data-en><h3>AI bid kit for contractors</h3><p>Draft BOQ, estimate, stage schedule and bid booklet in 1–2 days.</p></div></div>
-<div class="card"><div data-ar><h3>أتمتة قطاعية</h3><p>عيادات، عقارات، مدارس.</p></div><div data-en><h3>Sector automation</h3><p>Clinics, real estate, schools.</p></div></div>
-<div class="card"><div data-ar><h3>ورش تدريب داخلية بالعربي</h3><p>للجهات الحكومية والشركات.</p><div class="price">يبدأ من 3,500 درهم لنصف يوم</div></div><div data-en><h3>In-house AI workshops in Arabic</h3><p>For government teams and companies.</p><div class="price">From AED 3,500 per half day</div></div></div>
-<div class="card"><div data-ar><h3>تطوير مخصص</h3><p>وكلاء، بحث عربي في مستنداتك (RAG)، تطبيقات وأدوات داخلية.</p></div><div data-en><h3>Custom development</h3><p>Agents, Arabic document search (RAG), apps and internal tools.</p></div></div>
-</div><p class="small"><span data-ar>الأسعار تقديرية وتتثبّت بعرض مكتوب. لا تشمل ضريبة القيمة المضافة إن انطبقت.</span><span data-en>Indicative prices, confirmed in a written proposal. VAT excluded where applicable.</span></p></div></section>
-<section><div class="wrap"><h2><span data-ar>كيف نشتغل</span><span data-en>How we work</span></h2>
-<ol class="steps" data-ar><li>اكتشاف</li><li>تجربة صغيرة</li><li>إطلاق</li><li>دعم شهري</li></ol>
-<ol class="steps" data-en><li>Discover</li><li>Small pilot</li><li>Launch</li><li>Monthly support</li></ol></div></section>
-<section><div class="wrap"><h2><span data-ar>الخصوصية والنماذج</span><span data-en>Privacy and models</span></h2>
-<div data-ar><p class="lead">تشغيل محلي متى أمكن، محايدون للنماذج (Jais، Falcon، Qwen وغيرها) فنبدّل للأفضل بدون إعادة بناء، ومتوافقون مع قانون حماية البيانات الشخصية (المرسوم بقانون اتحادي 45 لسنة 2021).</p></div>
-<div data-en><p class="lead">Local processing where possible, model-agnostic (Jais, Falcon, Qwen and more) so we switch to the best model without rebuilding, aligned with the UAE PDPL (Federal Decree-Law 45 of 2021).</p></div></div></section>
-<section id="contact"><div class="wrap"><h2><span data-ar>تواصل معنا</span><span data-en>Contact</span></h2>
-<div data-ar><p class="lead">[بريد الشركة ورقم واتساب يُضافان بعد الموافقة]</p></div><div data-en><p class="lead">[Company email and WhatsApp to be added after approval]</p></div></div></section>
-<div class="wrap"><footer><span data-ar>HMK AI CONSULTANCIES — اتش ام كي للاستشارات الذكاء الاصطناعي · مؤسسة فردية · رخصة أبوظبي CN-6901062</span><span data-en>HMK AI CONSULTANCIES · Sole establishment · Abu Dhabi licence CN-6901062</span></footer></div>
-<script>function toggle(){const h=document.documentElement;const en=h.lang==='ar';h.lang=en?'en':'ar';h.dir=en?'ltr':'rtl'}
-if(location.hash==='#en')toggle()</script>
+
+<section id="services"><div class="wrap">
+<h2><span data-ar>شو نقدر نسوي لك؟</span><span data-en>What we can do for you</span></h2>
+<div class="grid">
+<div class="card"><div class="ic" aria-hidden="true">💬</div><div data-ar><h3>وكيل واتساب وموقع بالخليجي</h3><p>يرد على عملائك 24 ساعة، يحجز المواعيد، ويحوّل للموظف لما يحتاج.</p><span class="price">من 3,000 درهم + اشتراك</span></div><div data-en><h3>Gulf-Arabic WhatsApp & web agent</h3><p>Answers 24/7, books appointments and hands off to staff when needed.</p><span class="price">From AED 3,000 + monthly</span></div></div>
+<div class="card"><div class="ic" aria-hidden="true">🧭</div><div data-ar><h3>تقييم جاهزية الذكاء الاصطناعي</h3><p>نعرف وين الذكاء الاصطناعي يوفّر عليك، ونسلّمك خطة مكتوبة خلال 5 إلى 10 أيام عمل.</p><span class="price">من 3,500 درهم</span></div><div data-en><h3>AI readiness audit</h3><p>Where AI saves you time and money, as a written plan in 5–10 working days.</p><span class="price">From AED 3,500</span></div></div>
+<div class="card"><div class="ic" aria-hidden="true">🏗️</div><div data-ar><h3>حزمة عروض المقاولين</h3><p>مسودة جدول كميات وتقدير وجدول مراحل وكتيّب العرض خلال يوم أو يومين.</p></div><div data-en><h3>AI bid kit for contractors</h3><p>Draft BOQ, estimate, stage schedule and bid booklet in 1–2 days.</p></div></div>
+<div class="card"><div class="ic" aria-hidden="true">⚙️</div><div data-ar><h3>أتمتة حسب قطاعك</h3><p>عيادات، عقارات، مدارس: نشيل عنك الشغل المتكرر.</p></div><div data-en><h3>Sector automation</h3><p>Clinics, real estate, schools: we take the repetitive work off your plate.</p></div></div>
+<div class="card"><div class="ic" aria-hidden="true">🎓</div><div data-ar><h3>ورش تدريب بالعربي</h3><p>لفرق الجهات الحكومية والشركات، عملية وآمنة.</p><span class="price">من 3,500 درهم لنص يوم</span></div><div data-en><h3>AI workshops in Arabic</h3><p>Hands-on and safe, for government teams and companies.</p><span class="price">From AED 3,500 per half day</span></div></div>
+<div class="card"><div class="ic" aria-hidden="true">🛠️</div><div data-ar><h3>تطوير مخصّص</h3><p>وكلاء، بحث عربي داخل مستنداتك، تطبيقات وأدوات داخلية.</p></div><div data-en><h3>Custom development</h3><p>Agents, Arabic search across your documents, apps and internal tools.</p></div></div>
+</div>
+<p class="note"><span data-ar>الأسعار تقديرية وتتثبّت بعرض مكتوب، وما تشمل ضريبة القيمة المضافة إذا انطبقت.</span><span data-en>Indicative prices, confirmed in a written proposal. VAT excluded where applicable.</span></p>
+</div></section>
+
+<section><div class="wrap">
+<h2><span data-ar>كيف نشتغل</span><span data-en>How we work</span></h2>
+<ol class="steps" data-ar><li><b>نسمع منك</b><span>جلسة قصيرة نفهم فيها شغلك</span></li><li><b>تجربة صغيرة</b><span>تشوف النتيجة قبل ما تلتزم</span></li><li><b>إطلاق</b><span>نشغّلها عندك ونعلّم فريقك</span></li><li><b>دعم شهري</b><span>نطوّر ونبدّل للأفضل أول بأول</span></li></ol>
+<ol class="steps" data-en><li><b>We listen</b><span>A short call to understand your work</span></li><li><b>Small pilot</b><span>See results before you commit</span></li><li><b>Launch</b><span>We set it up and train your team</span></li><li><b>Monthly support</b><span>We keep improving as AI moves</span></li></ol>
+</div></section>
+
+<section><div class="wrap">
+<h2><span data-ar>بياناتك بأمان</span><span data-en>Your data stays safe</span></h2>
+<p class="lead" data-ar>نشغّل محلياً متى ما أمكن، ونقدر نبدّل بين النماذج (Jais وFalcon وQwen وغيرها) بدون ما نعيد البناء، ونلتزم بقانون حماية البيانات الشخصية الإماراتي (المرسوم بقانون اتحادي رقم 45 لسنة 2021).</p>
+<p class="lead" data-en>Local processing where possible, model-agnostic (Jais, Falcon, Qwen and more) so we switch to the best model without rebuilding, aligned with the UAE PDPL (Federal Decree-Law 45 of 2021).</p>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="contact">
+<h2><span data-ar>نتكلم؟</span><span data-en>Let's talk</span></h2>
+<p><span data-ar>جلسة تعريفية مجانية 20 دقيقة، بدون أي التزام.</span><span data-en>A free 20-minute intro, no commitment.</span></p>
+<div id="contactBox"><span class="empty"><span data-ar>قنوات التواصل بتنزل هني قريب 🌿</span><span data-en>Contact channels are coming here soon 🌿</span></span></div>
+</div></div></section>
+</main>
+<footer><div class="wrap"><span data-ar>HMK AI CONSULTANCIES — اتش ام كي للاستشارات الذكاء الاصطناعي · مؤسسة فردية · رخصة أبوظبي <span class="ltr">CN-6901062</span></span><span data-en>HMK AI CONSULTANCIES · Sole establishment · Abu Dhabi licence <span class="ltr">CN-6901062</span></span><br><a href="safi/privacy.html" style="color:inherit"><span data-ar>سياسة خصوصية تطبيق «صافي»</span><span data-en>Safi app privacy policy</span></a></div></footer>
+<script>
+/* Set these once Hamad approves a public contact. Empty = friendly "coming soon" state. */
+const CONTACT={email:"",whatsapp:""};
+const h=document.documentElement;
+function setLang(l){h.lang=l;h.dir=l==='ar'?'rtl':'ltr';try{localStorage.setItem('hmk-lang',l)}catch(e){}}
+document.getElementById('lang').onclick=()=>setLang(h.lang==='ar'?'en':'ar');
+const saved=(location.hash==='#en'&&'en')||(()=>{try{return localStorage.getItem('hmk-lang')}catch(e){}})();if(saved==='en')setLang('en');
+if(CONTACT.email||CONTACT.whatsapp){
+ const wa=CONTACT.whatsapp&&'https://wa.me/'+CONTACT.whatsapp.replace(/\D/g,''),ml=CONTACT.email&&'mailto:'+CONTACT.email+'?subject=HMK%20intro';
+ document.querySelectorAll('.js-cta').forEach((a,i)=>{a.href=wa||ml;a.textContent=i?'Book a free intro':'احجز جلستك المجانية'});
+ document.getElementById('contactBox').innerHTML=(wa?`<a class="btn" href="${wa}">واتساب · WhatsApp</a> `:'')+(ml?`<a class="btn" href="${ml}" style="margin-top:8px"><span class="ltr">${CONTACT.email}</span></a>`:'');
+}
+</script>
 </body></html>
